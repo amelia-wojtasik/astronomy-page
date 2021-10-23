@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: url("../img/background3.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+container{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.774);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgba(238, 130, 238, 0.116);
+    color: rgb(147, 47, 167);
+    letter-spacing: 5px;
+    font-weight: lighter;
+}
+
+/**** nav ****/
+nav{
+    width: 100%; 
+    height: auto;
+    padding-bottom: 2%;
+    border-bottom: rgba(238, 130, 238, 0.116) solid 3px;
+}
+
+nav ul{
+    width: 100%;
+    height: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav ul li{
+    width: 19%;
+    height: 5vh;
+}
+
+nav ul li a{
+    font-weight: lighter;
+    display: block;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(147, 47, 167);
+}
+
+nav ul li a:hover{
+    color: rgb(224, 96, 207);
+    transition:.3s;
+}
+
+/**** facts ****/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.facts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 45vh;
+    margin-top: 5%;
+}
+
+.photo img{
+    width: 40vw;
+    margin-bottom: 2%;
+    border: rgba(238, 130, 238, 0.116) solid 5px;
+}
+
+.photo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 2%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+    color: rgb(147, 47, 167);
+}
+
+.info h2{
+    font-size: 2rem;
+    letter-spacing: 5px;
+    border-bottom: rgb(147, 47, 167) solid 1px;
+    margin-bottom: 2%;
+}
+
+.info p{
+    text-align: justify;
+}
+
+/**** time ****/
+
+.time{
+    background-color: rgba(238, 130, 238, 0.116);
+    margin-top: 3%;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+.time h2{
+    color: rgb(147, 47, 167);
+    letter-spacing: 2px;
+    font-weight: lighter;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 2rem;
+}
+
+#today{
+    margin-bottom: 2%;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    color: rgb(99, 84, 184);
+}
+
+.dates{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+.dates p{
+    padding: 2%;
+    text-align: center;
+    width: 50%;
+    font-size: 1.5rem;
+    /*margin-bottom: 2%;*/
+    color: rgb(147, 47, 167);
+}
+
+.dates #date1,#date2,#date3,#date4,#date5{
+    color: rgb(99, 84, 184);
+}
+
+.dates #p1, #date1, #p3, #date3, #p5, #date5{
+    background-color: rgba(238, 130, 238, 0.116);
+}
+
+/**** form ****/
