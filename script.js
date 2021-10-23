@@ -126,15 +126,16 @@ function checkPlanets(){
         case 2:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<=15) lis[0].style.textDecoration = 'none';
-            }   
+            }
+            lis[1].style.textDecoration = 'none';
+            lis[6].style.textDecoration = 'none';   
         }
         break;
 
         case 3:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<15) lis[0].style.textDecoration = 'none';
+                if(day<=15) lis[0].style.textDecoration = 'none';
             }   
         }
         break;
