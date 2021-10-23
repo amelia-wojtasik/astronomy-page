@@ -1,15 +1,7 @@
-/* const przycisk=document.getElementById("quote");
-
-przycisk.addEventListener('click', ()=>{
-    const quote=document.querySelector(".quote");
-    quote.remove();
-}); */
-
 const next = document.querySelector('#button');
 
 next.addEventListener('click',nextFact);
 
-const planets = document.querySelector('.planets');
 const img = document.querySelector('#img');
 const title = document.querySelector('.info h2');
 const text = document.querySelector('.info p');
@@ -47,14 +39,14 @@ function timeForEvent(y, m, d, h, min, s){
     let leftTime = dateOfEvent.getTime() - now.getTime();
 
 if(leftTime > 0){
-    let secs = leftTime / 1000;   // sekundy
-    let mins = secs / 60;               // minuty
-    let hrs = mins / 60;               // godziny
-    let ds = hrs / 24;                  //dni
+    let secs = leftTime / 1000;   
+    let mins = secs / 60;               
+    let hrs = mins / 60;              
+    let ds = hrs / 24;             
     
-    let seconds = Math.floor(secs  % 60);    // pozostało sekund    
-    let minutes = Math.floor(mins % 60); // pozostało minut
-    let hours = Math.floor(hrs % 24);          // pozostało godzin
+    let seconds = Math.floor(secs  % 60);    
+    let minutes = Math.floor(mins % 60);
+    let hours = Math.floor(hrs % 24);
     let days = Math.floor(ds);
     return `${days} days, ${hours} h, ${minutes} min, ${seconds} s`;
 }
@@ -93,3 +85,124 @@ function myTimer6() {
     let time = timeForEvent(2021,11,29,0,0,0);
   document.getElementById("date5").textContent = `${time}`;
 }
+
+const planets = ["Mercury","Venus","Mars","Jupiter","Saturn","Uranus","Neptune"]
+
+const check = document.getElementById("check");
+check.addEventListener('click',checkPlanets);
+
+function checkPlanets(){
+    const selectDate = document.getElementById("date").value;
+    const newDate = new Date(selectDate);
+    const month = newDate.getMonth();
+    const day = newDate.getDate();
+    const lis = document.querySelectorAll("#list li");
+
+    switch(month){
+        case 0:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<=15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 1:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<=15){
+                    lis[0].style.textDecoration = 'none';
+                    lis[3].style.textDecoration = 'none';
+                    lis[4].style.textDecoration = 'none';
+                }
+                    if(day>=15){
+                    lis[1].style.textDecoration = 'none';
+                    lis[6].style.textDecoration = 'none';
+                }
+            }
+        }
+        break;
+
+        case 2:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<=15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 3:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 4:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 5:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 6:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 7:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 8:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 9:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 10:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+
+        case 11:{
+            for(let i=0;i<7;i++){
+                lis[i].style.textDecoration = 'underline';
+                if(day<15) lis[0].style.textDecoration = 'none';
+            }   
+        }
+        break;
+        default: alert("error"); 
+        }
+
+    }
