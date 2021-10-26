@@ -90,13 +90,13 @@ const planets = ["Mercury","Venus","Mars","Jupiter","Saturn","Uranus","Neptune"]
 
 const check = document.getElementById("check");
 check.addEventListener('click',checkPlanets);
+const lis = document.querySelectorAll("#list li");
 
 function checkPlanets(){
     const selectDate = document.getElementById("date").value;
     const newDate = new Date(selectDate);
     const month = newDate.getMonth();
-    const day = newDate.getDate();
-    const lis = document.querySelectorAll("#list li");
+    const day = newDate.getDate();    
 
     switch(month){
         case 0:{
@@ -135,15 +135,18 @@ function checkPlanets(){
         case 3:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<=15) lis[0].style.textDecoration = 'none';
             }   
+            lis[0].style.textDecoration = 'none';
+            lis[1].style.textDecoration = 'none';
+            lis[2].style.textDecoration = 'none';
+            lis[6].style.textDecoration = 'none'; 
         }
         break;
 
         case 4:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<15) lis[0].style.textDecoration = 'none';
+                if(day>=7) lis[0].style.textDecoration = 'none';
             }   
         }
         break;
@@ -151,7 +154,7 @@ function checkPlanets(){
         case 5:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<15) lis[0].style.textDecoration = 'none';
+                if(day>7) lis[0].style.textDecoration = 'none';
             }   
         }
         break;
@@ -175,23 +178,23 @@ function checkPlanets(){
         case 8:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<15) lis[0].style.textDecoration = 'none';
-            }   
+            }
+            lis[2].style.textDecoration = 'none'; 
         }
         break;
 
         case 9:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<15) lis[0].style.textDecoration = 'none';
-            }   
+            }
+            lis[2].style.textDecoration = 'none';    
         }
         break;
 
         case 10:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<15) lis[0].style.textDecoration = 'none';
+                if(day<15) lis[2].style.textDecoration = 'none';
             }   
         }
         break;
@@ -199,11 +202,46 @@ function checkPlanets(){
         case 11:{
             for(let i=0;i<7;i++){
                 lis[i].style.textDecoration = 'underline';
-                if(day<15) lis[0].style.textDecoration = 'none';
-            }   
+            }
+            lis[1].style.textDecoration = 'none';     
         }
         break;
         default: alert("error"); 
-        }
+        
 
     }
+}
+    
+
+const form=document.querySelector(".form");
+const curiosity=document.createElement('p');
+curiosity.style.fontSize="1rem";
+form.appendChild(curiosity);
+
+lis[0].addEventListener('click',()=>{
+    curiosity.textContent="Mercury has no moons or rings.";
+})
+
+lis[1].addEventListener('click',()=>{
+    curiosity.textContent="A day on Venus is longer than a year";
+})
+
+lis[2].addEventListener('click',()=>{
+    curiosity.textContent="Mars has north and south poles like earth. The polar ice caps are covered in a layer of frozen carbon dioxide (dry ice).";
+})
+
+lis[3].addEventListener('click',()=>{
+    curiosity.textContent="Jupiter Is The Fastest Spinning Planet In The Solar System.";
+})
+
+lis[4].addEventListener('click',()=>{
+    curiosity.textContent="Saturn is the flattest planet.";
+})
+
+lis[5].addEventListener('click',()=>{
+    curiosity.textContent="Uranus is the coldest planet in the Solar System.";
+})
+
+lis[6].addEventListener('click',()=>{
+    curiosity.textContent="Neptune has 6 faint rings.";
+})
